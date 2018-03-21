@@ -93,7 +93,7 @@ function init() {
   direction = 0;
   size = 0;
 
-  id = setInterval(step, 300);
+  id = setInterval(step, 500);
 }
 
 function onKeyDown(evt) {
