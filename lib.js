@@ -40,14 +40,17 @@ var actual_number_color = "#00b159";
 function create_operation(){
 
   var operator = Math.floor(Math.random() * 4);
-  var max_random;
+  var max_random_r;
+  var max_random_l;
   if(operator > 1){
-    max_random = 10;
+    max_random_r = 50;
+    max_random_l = 100;
   }else{
-    max_random = 100;
+    max_random_r = 100;
+    max_random_l = 100;
   }
-  var number_one = Math.floor(Math.random() * max_random) + 1;
-  var number_two = Math.floor(Math.random() * max_random) + 1;
+  var number_one = Math.floor(Math.random() * max_random_l) + 1;
+  var number_two = Math.floor(Math.random() * max_random_r) + 1;
   if(operator ==  3){
     number_one = number_one * number_two;
   }
@@ -93,7 +96,7 @@ function init() {
   direction = 0;
   size = 0;
 
-  id = setInterval(step, 500);
+  id = setInterval(step, 700);
 }
 
 function onKeyDown(evt) {
