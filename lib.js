@@ -58,22 +58,22 @@ function create_operation(){
   switch (operator) {
     case 0:
       problem = number_one + " + " + number_two;
-      trap_num = number_one - number_two + 1;
+      trap_num = (number_one + number_two) + Math.floor(Math.random() * 3) + 1;
       solution_number = number_one + number_two;
       break;
     case 1:
       problem = number_one + " - " + number_two;
-      trap_num = number_one + number_two + 1;
+      trap_num = (number_one - number_two) + Math.floor(Math.random() * 3) + 1;
       solution_number = number_one - number_two;
       break;
     case 2:
       problem = number_one + " * " + number_two;
-      trap_num = number_one / number_two + 1;
+      trap_num = (number_one * number_two) + Math.floor(Math.random() * 3) + 1;
       solution_number = number_one * number_two;
       break;
     case 3:
       problem = number_one + " / " + number_two;
-      trap_num = number_one * number_two + 1;
+      trap_num = (number_one * number_two) + Math.floor(Math.random() * 3) + 1;
       solution_number = Math.floor(number_one / number_two);
       break;
     default:
